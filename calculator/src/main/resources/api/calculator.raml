@@ -1,0 +1,44 @@
+#%RAML 1.0
+title: Calculator
+version: v.0
+description: "This API is used to perform some math operations"
+protocols:
+  - HTTP
+traits:
+  reuse: !include traits/reusablecode.raml
+mediaType: [application/json]
+/addition:
+  get:
+    is: [reuse]
+    responses:
+      200:
+        body:
+            example: !include examples/addition-response.json
+/subtraction:
+  put:
+    is: [reuse]
+    responses:
+      200:
+        body:
+            example: !include examples/subtraction-response.json
+/division:
+  post:
+    is: [reuse]
+    responses:
+      200:
+        body:
+            example: !include examples/division-response.json
+/multiplication:
+  patch:
+    is: [reuse]
+    responses:
+      200:
+        body:
+            example: !include examples/multiplication-response.json
+
+
+                     
+
+
+       
+            
